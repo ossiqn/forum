@@ -1,0 +1,16 @@
+ALTER TABLE `badges` ADD `is_active` TINYINT(1) NOT NULL DEFAULT '1' AFTER `description`;
+ALTER TABLE `badges` ADD `type` VARCHAR(50) NULL AFTER `name`;
+ALTER TABLE `profile_posts` CHANGE `user_id` `author_id` INT(11) NOT NULL;
+ALTER TABLE `users` 
+ADD `telegram_user` VARCHAR(255) NULL DEFAULT NULL AFTER `instagram`,
+ADD `telegram_channel` VARCHAR(255) NULL DEFAULT NULL AFTER `telegram_user`;
+ALTER TABLE `badges` ADD `color` VARCHAR(50) NULL DEFAULT NULL;
+ALTER TABLE `badges` ADD `bg_color` VARCHAR(50) NULL DEFAULT NULL AFTER `color`;
+ALTER TABLE `badges` ADD `slug` VARCHAR(255) NULL DEFAULT NULL;
+ALTER TABLE `user_badges` ADD `awarded_by` INT NULL DEFAULT NULL;
+
+SQLDA BUNLARI CALISTIR.
+
+
+
+
